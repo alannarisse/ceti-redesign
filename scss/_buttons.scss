@@ -1,0 +1,16 @@
+/* BUTTONS */
+
+.btn {
+	font-size: 2.2rem;
+	color: $primary-color;
+	padding: 3em 1rem;
+	border-width: 1px; 
+	border-style: solid;
+	border-color: $primary-color;
+	&:hover {
+		border-color: $primary-color;
+	}
+	&.dark {
+		border-color: $primary-color;
+	}
+}

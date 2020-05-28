@@ -1,0 +1,14 @@
+/* MAIN STYLES 
+* This file gets compiled down to css/style.css
+* The Sass-lang site offers a list of compilers to use
+* https://sass-lang.com/install
+*
+*/
+@import 'reset'; /* */
+@import 'variables'; /* */
+@import 'functions'; /* */
+@import 'mixins'; /* */
+@import 'typography'; /* */
+@import 'nav'; /* */
+@import 'layout';  /* */
+@import 'buttons'; /* */
