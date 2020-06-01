@@ -1,1 +1,28 @@
-/* */
+/* LAYOUT */
+
+main { width: 100%; }
+section {
+	div {
+		width: 90%;
+		margin: auto;
+		padding: 4rem 0;
+	}
+	&.light { 
+		background-color: #fff;
+	}
+	&.dark { 
+		background-color: $mid-bkgrnd-color;
+		color: #fff;
+		h1, h2, h3, h4 { color: #fff; }
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	section {
+		div {
+			width: 60%;
+			margin: auto;
+			padding: 8rem 0;
+		}
+	}
+}

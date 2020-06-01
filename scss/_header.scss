@@ -1,22 +1,25 @@
-/* START of Mobile Menu */
+/* NAV */
 
+nav {
+    margin-top: 20px;
+}
+
+.logo svg {
+    width:160px;
+    margin-top: -20px;
+    margin-left: 40px;
+}
 .nav, .desktop {
     display: block;
-    position: fixed;
-    top: 0px;
-    left: 0px;
     width: 100%;
-    z-index: 900;
 }
 
 .icon {
-    position: fixed;
     cursor: pointer;
     top: 5%;
     right: 0%;
     width: 40px;
     height: 45px;
-    transform: translate(-50%, -50%);
     display: block;
     z-index: 1000;
 }
@@ -28,9 +31,8 @@
     background: #666;
     border-radius: 5px;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    top: 40px;
+    right: 40px;
     box-shadow: 0 2px 5px rgba(0,0,0,.2);
     transition: .5s;
 }
@@ -76,8 +78,8 @@
     position: fixed;
     width: 100%;
     z-index: 999;
-    padding-top: 150px;
-    font-family: 'Helvetica', sans-serif;
+    padding-top: 10px;
+    font-family: 'Source Code Pro', sans-serif;
     text-align: center;
 }
 
@@ -89,12 +91,12 @@
 .menu-mobile a {
     clear: right;
     text-decoration: none;
-    color: #333;
+    color: $primary-color;
     height: 70px;
     line-height: 70px;
 }
 .menu-mobile a:hover {
-    color: red;
+    color: $secondary-color;
 }
 
 .desktop, .menu-desktop, .menu-mobile {
@@ -105,6 +107,9 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    header  {
+        display: flex;
+    }
     /* START of desktop menu for 768 media query */
     .menu-desktop {
         width: 100%;
@@ -113,11 +118,7 @@
         line-height: 50px;
         justify-content: space-evenly;
         flex-direction: row;
-        height: 0;
         text-align: right;
-        position: absolute;
-        top: 0;
-        right: 0;
     }
 
     .menu-desktop a {
@@ -126,11 +127,11 @@
         height: 0;
         line-height: 50px;
         text-decoration: none;
-        color: #333;
+        color: $primary-color;
         justify-content: space-evenly;
     }
     .menu-desktop a:hover {
-        color: red;
+        color: $secondary-color;
     }
 
     .desktop {

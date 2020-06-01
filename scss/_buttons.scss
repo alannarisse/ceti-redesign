@@ -1,16 +1,29 @@
 /* BUTTONS */
 
-.btn {
+a.btn, button.btn {
+	font-family: 'Source Code Pro', monospace;
+	display: inline-block;
+	text-transform: uppercase;
 	font-size: 2.2rem;
 	color: $primary-color;
-	padding: 3em 1rem;
+	text-decoration: none;
+	margin-top: 4rem;
+	padding: 1rem 1rem;
 	border-width: 1px; 
 	border-style: solid;
 	border-color: $primary-color;
 	&:hover {
-		border-color: $primary-color;
+		border-color: $secondary-color;
+		color: $secondary-color;
 	}
 	&.dark {
-		border-color: $primary-color;
+		border-color: #fff;
+		background-color: #fff;
+		color: $primary-color;
+	}
+	&.dark:hover {
+		border-color: $secondary-color;
+		background-color: $primary-color;
+		color: $secondary-color;
 	}
 }

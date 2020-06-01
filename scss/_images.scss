@@ -1,0 +1,9 @@
+/* IMAGES */
+
+img { width: 200%}
+
+
+@media only screen and (min-width: 768px) {
+	img { width: 100%;}
+
+}

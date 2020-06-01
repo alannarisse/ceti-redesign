@@ -4,25 +4,73 @@
 * https://sass-lang.com/install
 *
 */
-/* */
+/* RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* */
 /* VARIABLES */
 /* bright green */
 /* light blue */
 /* footer color, dark blue background */
 /* */
+/* FUNCTIONS */
 /* */
-/* */
-/* */
+/* MIXINS */
 /* */
 /* TYPOGRAPHY */
-@font-face {
-  font-family: "Source Code Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Source Code Pro"), local("Source-Code-Pro"), url(../fonts/Source_Code_Pro/SourceCodePro-Bold.ttf) format("ttf");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
 html {
   font-size: 10px;
   color: #000;
@@ -33,26 +81,29 @@ body {
   font-size: 2rem;
 }
 
-h1 {
-  font-family: "Source Code Pro";
+h1, h2 {
+  font-family: "Source Code Pro", monospace;
   font-size: 6rem;
   font-weight: 700;
-  line-height: 4rem;
+  line-height: 6rem;
   color: #222222;
-}
-
-h2 {
-  font-size: 4.4rem;
-  font-weight: 400;
+  margin-bottom: 1.2rem;
 }
 
 h3 {
+  font-size: 3.4rem;
+  line-height: 3.8rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+h4 {
   font-size: 2.6rem;
   font-weight: 700;
   color: #222222;
 }
 
-h4 {
+h5 {
   font-size: 2.2rem;
   font-weight: 700;
   color: #222222;
@@ -60,31 +111,58 @@ h4 {
 
 nav a {
   font-size: 2.4rem;
+  font-family: "Source Code Pro", monospace;
   color: #1333D3;
 }
 nav a:hover {
   color: #6DFF70;
 }
 
+p {
+  line-height: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  h3 {
+    font-size: 4.4rem;
+    line-height: 4.8rem;
+  }
+}
 /* */
-/* START of Mobile Menu */
+/* IMAGES */
+img {
+  width: 200%;
+}
+
+@media only screen and (min-width: 768px) {
+  img {
+    width: 100%;
+  }
+}
+/* image handling */
+/* NAV */
+nav {
+  margin-top: 20px;
+}
+
+.logo svg {
+  width: 160px;
+  margin-top: -20px;
+  margin-left: 40px;
+}
+
 .nav, .desktop {
   display: block;
-  position: fixed;
-  top: 0px;
-  left: 0px;
   width: 100%;
-  z-index: 900;
 }
 
 .icon {
-  position: fixed;
   cursor: pointer;
   top: 5%;
   right: 0%;
   width: 40px;
   height: 45px;
-  transform: translate(-50%, -50%);
   display: block;
   z-index: 1000;
 }
@@ -96,9 +174,8 @@ nav a:hover {
   background: #666;
   border-radius: 5px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40px;
+  right: 40px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   transition: 0.5s;
 }
@@ -144,8 +221,8 @@ nav a:hover {
   position: fixed;
   width: 100%;
   z-index: 999;
-  padding-top: 150px;
-  font-family: "Helvetica", sans-serif;
+  padding-top: 10px;
+  font-family: "Source Code Pro", sans-serif;
   text-align: center;
 }
 
@@ -158,13 +235,13 @@ nav a:hover {
 .menu-mobile a {
   clear: right;
   text-decoration: none;
-  color: #333;
+  color: #1333D3;
   height: 70px;
   line-height: 70px;
 }
 
 .menu-mobile a:hover {
-  color: red;
+  color: #6DFF70;
 }
 
 .desktop, .menu-desktop, .menu-mobile {
@@ -174,6 +251,10 @@ nav a:hover {
 /* END OF Mobile Menu */
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+  }
+
   /* START of desktop menu for 768 media query */
   .menu-desktop {
     width: 100%;
@@ -182,11 +263,7 @@ nav a:hover {
     line-height: 50px;
     justify-content: space-evenly;
     flex-direction: row;
-    height: 0;
     text-align: right;
-    position: absolute;
-    top: 0;
-    right: 0;
   }
 
   .menu-desktop a {
@@ -195,12 +272,12 @@ nav a:hover {
     height: 0;
     line-height: 50px;
     text-decoration: none;
-    color: #333;
+    color: #1333D3;
     justify-content: space-evenly;
   }
 
   .menu-desktop a:hover {
-    color: red;
+    color: #6DFF70;
   }
 
   .desktop {
@@ -216,25 +293,85 @@ nav a:hover {
 
   /* END of desktop menu for 768 media query */
 }
-/* */
-/* */
-/* */
+/* logo and navigation */
+/* LAYOUT */
+main {
+  width: 100%;
+}
+
+section div {
+  width: 90%;
+  margin: auto;
+  padding: 4rem 0;
+}
+section.light {
+  background-color: #fff;
+}
+section.dark {
+  background-color: #2E4DDF;
+  color: #fff;
+}
+section.dark h1, section.dark h2, section.dark h3, section.dark h4 {
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  section div {
+    width: 60%;
+    margin: auto;
+    padding: 8rem 0;
+  }
+}
+/* section and page layout*/
+footer {
+  background-color: #000fbd;
+  color: #fff;
+}
+footer div {
+  width: 60%;
+  margin: auto;
+  padding: 8rem 0;
+}
+footer svg {
+  background-color: #fff;
+  fill: #000fbd;
+  padding: 1rem;
+  margin-right: 1.6rem;
+}
+footer svg:hover {
+  fill: #6DFF70;
+}
+
+/* global footer */
 /* BUTTONS */
-.btn {
+a.btn, button.btn {
+  font-family: "Source Code Pro", monospace;
+  display: inline-block;
+  text-transform: uppercase;
   font-size: 2.2rem;
   color: #1333D3;
-  padding: 3em 1rem;
+  text-decoration: none;
+  margin-top: 4rem;
+  padding: 1rem 1rem;
   border-width: 1px;
   border-style: solid;
   border-color: #1333D3;
 }
-.btn:hover {
-  border-color: #1333D3;
+a.btn:hover, button.btn:hover {
+  border-color: #6DFF70;
+  color: #6DFF70;
 }
-.btn.dark {
-  border-color: #1333D3;
+a.btn.dark, button.btn.dark {
+  border-color: #fff;
+  background-color: #fff;
+  color: #1333D3;
+}
+a.btn.dark:hover, button.btn.dark:hover {
+  border-color: #6DFF70;
+  background-color: #1333D3;
+  color: #6DFF70;
 }
 
-/* */
+/* button styles */
 
 /*# sourceMappingURL=style.css.map */
