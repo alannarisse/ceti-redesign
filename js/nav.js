@@ -14,19 +14,27 @@ function closeMobileMenu(){
     })
 }
 
+// handle links with @href started with '#' only
+$(document).on('click', 'a[href^="#"]', function(e) {
+    // target element id
+    var id = $(this).attr('href');
 
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
 
-function desktopMenu() {
-    $(window).scroll(function() {
-        if ($(this).scrollTop() > 50 && $(window).width() > 768) {
-            $('nav.desktop').fadeIn(500);
-        } else {
-            $('nav.desktop').fadeOut(500);
-        }
-    })
-}
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
+
+    // top position relative to the document
+    var pos = $id.offset().top;
+
+    // animated top scrolling
+    $('body, html').animate({scrollTop: pos});
+});
 
 //when the page loads call toggleIcon;
 $(toggleIcon);
 $(closeMobileMenu);
-$(desktopMenu);
