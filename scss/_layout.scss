@@ -23,7 +23,17 @@ section {
 	&.dark { 
 		background-color: $mid-bkgrnd-color;
 		color: $white;
-		h1, h2, h3, h4, p { color: $white; }
+		h1, h2, h3, h4, p, a { color: $white; }
+	}
+	&.linear {
+		background: linear-gradient(270deg, #4FE5FE 0%, #1333D3 82.86%);
+		color: $white;
+		h1, h2, h3, h4, p, a { color: $white; }
+		nav {
+			background-color: $ceti-blue;
+			a {color: $white;}
+			a:hover {color: $ceti-green;}
+		}
 	}
 	&.gof {
 		background-color: $gof-pink;
@@ -41,6 +51,18 @@ section {
 		h1, h2, h3, h4, p { color: $white; }
 	}
 }
+#devicesNeeded {
+	line-height: 2.8rem;
+	ul, ol li {
+		margin-top: 2.6rem;
+	}
+	.sublist {
+		margin-left: 2.8rem;
+		li {margin-top: 1.1rem;}
+		ul { margin-left: 2.8rem;}
+	}
+}
+
 
 @media only screen and (min-width: 768px) {
 	section, footer {
@@ -49,7 +71,7 @@ section {
 			margin: auto;
 			padding: 8rem 0;
 		}
-		ul {
+		.subnav {
 			width: 70%; 
 			margin: auto;
 			padding-top: 20px;

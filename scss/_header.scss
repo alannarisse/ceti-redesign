@@ -1,7 +1,6 @@
 /* NAV */
 
 nav {
-    margin-top: 30px;
     a {
     font-size: 2.4rem;
     font-family: 'Source Sans Pro', monospace;
@@ -24,36 +23,22 @@ nav {
 
 .icon {
     cursor: pointer;
-    top: 5%;
+    top: 0%;
     right: 0%;
-    width: 40px;
-    height: 45px;
+
     display: block;
     z-index: 1000;
 }
 
 .hamburger {
-    width: 40px;
-    height: 4px;
-    line-height: 70px;
-    background: #666;
-    border-radius: 5px;
     position: absolute;
     top: 40px;
     right: 40px;
-    box-shadow: 0 2px 5px rgba(0,0,0,.2);
     transition: .5s;
 }
 
 .hamburger:before,
 .hamburger:after {
-    content: '';
-    position: absolute;
-    width: 40px;
-    height: 4px;
-    background: #666;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,.2);
     transition: .5s;
 }
 
@@ -81,10 +66,11 @@ nav {
 }
 
 .menu-mobile {
-    background-color: #efefef;
-    height: 100vh;
+    background-color: $white;
+    border: 1px solid $ceti-orange;
     position: fixed;
-    width: 100%;
+    right: 0;
+    width: 40rem;
     z-index: 999;
     padding-top: 10px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -95,6 +81,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    border-bottom: 1px solid $ceti-orange;
 }
 .menu-mobile a {
     clear: right;
@@ -109,6 +96,7 @@ nav {
 
 .desktop, .menu-desktop, .menu-mobile {
         display: none;
+        margin-top: 90px;
     }
 /* END OF Mobile Menu */
 
@@ -119,40 +107,7 @@ nav {
         display: flex;
     }
     /* START of desktop menu for 768 media query */
-    .menu-desktop {
-        width: 100%;
-        display: block;
-        padding: 0;
-        line-height: 50px;
-        justify-content: space-evenly;
-        flex-direction: row;
-        text-align: right;
-    }
 
-    .menu-desktop a {
-        display: inline-flex;
-        margin-right: 30px;
-        height: 0;
-        line-height: 50px;
-        text-decoration: none;
-        color: $ceti-grey;
-        justify-content: space-evenly;
-    }
-    .menu-desktop a:hover {
-        color: $ceti-orange;
-    }
-
-    .desktop {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        display: block;
-        padding-right: 20px;
-    }
-
-    nav.nav, .menu-mobile {
-        display: none;
-    }
     /* END of desktop menu for 768 media query */
 
 }
