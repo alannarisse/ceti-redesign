@@ -7,22 +7,52 @@ section {
 		margin: auto;
 		padding: 4rem 0;
 	}
+	nav {
+		margin:0;
+		height: 7rem;
+		a {text-decoration: none;}
+		ul {
+			list-style-type: none;
+			display: flex;
+		}
+		li { padding-right: 6.5rem;}
+	}
 	&.light { 
-		background-color: #fff;
+		background-color: $white;
 	}
 	&.dark { 
 		background-color: $mid-bkgrnd-color;
-		color: #fff;
-		h1, h2, h3, h4 { color: #fff; }
+		color: $white;
+		h1, h2, h3, h4, p { color: $white; }
+	}
+	&.gof {
+		background-color: $gof-pink;
+		color: $white;
+		h1, h2, h3, h4, p { color: $white; }
+		nav {
+			background-color: $ceti-yellow;
+			a {color: $ceti-blue;}
+			a:hover {color: $ceti-orange;}
+		}
+	}
+	&.midgrey {
+		background-color: $ceti-midgrey;
+		color: $white;
+		h1, h2, h3, h4, p { color: $white; }
 	}
 }
 
 @media only screen and (min-width: 768px) {
-	section {
+	section, footer {
 		div {
-			width: 60%;
+			width: 70%;
 			margin: auto;
 			padding: 8rem 0;
+		}
+		ul {
+			width: 70%; 
+			margin: auto;
+			padding-top: 20px;
 		}
 	}
 }

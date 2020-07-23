@@ -1,16 +1,17 @@
 footer {
-	background-color: $drk-bkgrnd-color;
-	color: #fff;
-	div {
-		width: 60%;
-		margin: auto;
-		padding: 8rem 0;
+	background-color: $ceti-grey;
+	color: $white;
+	p {
+		color: $white;
 	}
 	svg {
-		background-color: #fff;
-		fill: $drk-bkgrnd-color;
+		background-color: $white;
+		fill: $ceti-orange;
 		padding: 1rem;
-		&:hover{ fill: $ceti-green;}
+		&:hover{ 
+			fill: $white;
+			background-color: $ceti-orange;
+		}
 		margin-right: 1.6rem;
 	}
 }

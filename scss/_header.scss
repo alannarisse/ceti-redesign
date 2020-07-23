@@ -1,7 +1,15 @@
 /* NAV */
 
 nav {
-    margin-top: 20px;
+    margin-top: 30px;
+    a {
+    font-size: 2.4rem;
+    font-family: 'Source Sans Pro', monospace;
+    color: $ceti-grey;
+    &:hover {
+            color: $ceti-orange;
+        }
+    }
 }
 
 .logo svg {
@@ -79,7 +87,7 @@ nav {
     width: 100%;
     z-index: 999;
     padding-top: 10px;
-    font-family: 'Source Code Pro', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     text-align: center;
 }
 
@@ -91,12 +99,12 @@ nav {
 .menu-mobile a {
     clear: right;
     text-decoration: none;
-    color: $ceti-blue;
+    color: $ceti-grey;
     height: 70px;
     line-height: 70px;
 }
 .menu-mobile a:hover {
-    color: $ceti-green;
+    color: $ceti-orange;
 }
 
 .desktop, .menu-desktop, .menu-mobile {
@@ -127,11 +135,11 @@ nav {
         height: 0;
         line-height: 50px;
         text-decoration: none;
-        color: $ceti-blue;
+        color: $ceti-grey;
         justify-content: space-evenly;
     }
     .menu-desktop a:hover {
-        color: $ceti-green;
+        color: $ceti-orange;
     }
 
     .desktop {
@@ -139,6 +147,7 @@ nav {
         flex-direction: row;
         justify-content: space-between;
         display: block;
+        padding-right: 20px;
     }
 
     nav.nav, .menu-mobile {

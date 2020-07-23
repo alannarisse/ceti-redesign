@@ -1,7 +1,14 @@
 /* IMAGES */
 
-img { width: 200%}
+img { width: 100%}
 
+.subpage {
+	figure {
+		height: 30rem;
+		overflow: hidden;
+		img { margin-top: -4rem; }
+	}
+}
 
 @media only screen and (min-width: 768px) {
 	img { width: 100%;}

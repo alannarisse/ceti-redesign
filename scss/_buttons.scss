@@ -2,28 +2,52 @@
 
 a.btn, button.btn {
 	font-family: 'Source Code Pro', monospace;
-	display: inline-block;
-	text-transform: uppercase;
+	font-weight: 600;
 	font-size: 2.2rem;
-	color: $ceti-blue;
+	color: $ceti-orange;
+	background-color: $white;
 	text-decoration: none;
+	text-transform: uppercase;
+	display: inline-block;
 	margin-top: 4rem;
+	margin-right: 2rem;
 	padding: 1rem 1rem;
-	border-width: 1px; 
+	border-width: 3px; 
 	border-style: solid;
-	border-color: $ceti-blue;
+	border-color: $ceti-orange;
 	&:hover {
-		border-color: $ceti-green;
-		color: $ceti-green;
+		border-color: $ceti-orange;
+		color: $white;
+		background-color: $ceti-orange
 	}
 	&.dark {
-		border-color: #fff;
-		background-color: #fff;
+		border-color: $white;
+		background-color: $white;
 		color: $ceti-blue;
 	}
+
 	&.dark:hover {
 		border-color: $ceti-green;
 		background-color: $ceti-blue;
 		color: $ceti-green;
+	}
+	&.pink {
+		border-color: $white;
+		background-color: $white;
+		color: $gof-pink;
+	}
+	&.pink:hover {
+		border-color: $white;
+		background-color: $gof-pink;
+		color: $white;
+	}&.yellow {
+		border-color: $ceti-blue;
+		background-color: $ceti-yellow;
+		color: $ceti-blue;
+	}
+	&.yellow:hover {
+		border-color: $ceti-yellow;
+		background-color: $ceti-blue;
+		color: $ceti-yellow;
 	}
 }
