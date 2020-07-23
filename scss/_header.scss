@@ -91,12 +91,12 @@ nav {
 .menu-mobile a {
     clear: right;
     text-decoration: none;
-    color: $primary-color;
+    color: $ceti-blue;
     height: 70px;
     line-height: 70px;
 }
 .menu-mobile a:hover {
-    color: $secondary-color;
+    color: $ceti-green;
 }
 
 .desktop, .menu-desktop, .menu-mobile {
@@ -127,11 +127,11 @@ nav {
         height: 0;
         line-height: 50px;
         text-decoration: none;
-        color: $primary-color;
+        color: $ceti-blue;
         justify-content: space-evenly;
     }
     .menu-desktop a:hover {
-        color: $secondary-color;
+        color: $ceti-green;
     }
 
     .desktop {

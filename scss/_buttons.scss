@@ -5,25 +5,25 @@ a.btn, button.btn {
 	display: inline-block;
 	text-transform: uppercase;
 	font-size: 2.2rem;
-	color: $primary-color;
+	color: $ceti-blue;
 	text-decoration: none;
 	margin-top: 4rem;
 	padding: 1rem 1rem;
 	border-width: 1px; 
 	border-style: solid;
-	border-color: $primary-color;
+	border-color: $ceti-blue;
 	&:hover {
-		border-color: $secondary-color;
-		color: $secondary-color;
+		border-color: $ceti-green;
+		color: $ceti-green;
 	}
 	&.dark {
 		border-color: #fff;
 		background-color: #fff;
-		color: $primary-color;
+		color: $ceti-blue;
 	}
 	&.dark:hover {
-		border-color: $secondary-color;
-		background-color: $primary-color;
-		color: $secondary-color;
+		border-color: $ceti-green;
+		background-color: $ceti-blue;
+		color: $ceti-green;
 	}
 }
